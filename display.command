@@ -14,8 +14,6 @@ import time
 import asyncio
 from bscpylgtv import WebOsClient
 
-time.sleep
-
 def get_display_name():
     cmd = ["system_profiler", "SPDisplaysDataType", "-xml"]
     output = subprocess.check_output(cmd)
@@ -34,7 +32,6 @@ async def change_display_settings():
     await client.set_device_info(Input, Input_Mode, Input_Name)
 
     await client.disconnect()
-
 
 display_name_old = None
 
