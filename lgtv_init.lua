@@ -149,7 +149,7 @@ watcher = hs.caffeinate.watcher.new(function(eventType)
       if debug then print("TV was turned on") end
 
       if lgtv_current_app_id() ~= app_id and switch_input_on_wake then
-        execute("startApp ssl com.webos.app.hdmi1")
+        execute("startApp ssl com.webos.app."..tv_input:lower():gsub("_", ""))
         if debug then print("TV input switched to "..app_id) end
       end
 
