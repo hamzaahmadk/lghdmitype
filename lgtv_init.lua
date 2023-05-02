@@ -5,6 +5,7 @@ local debug = false  -- If you run into issues, set to true to enable debug mess
 local IP = "192.168.68.115" -- IP address for TV
 local mode = "pc" -- Mode for HDMI input
 local name = '"MacBook Pro"' -- Name for HDMI input
+local bscpylgtv = "~/Developer/Anaconda/anaconda3/bin/bscpylgtvcommand" -- -- Full path to "bscpylgtvcommand" executable
 local disable_lgtv = false
 -- NOTE: You can disable this script by setting the above variable to true, or by creating a file named
 -- `disable_lgtv` in the same directory as this file, or at ~/.disable_lgtv.
@@ -17,7 +18,6 @@ local lgtv_path = "~/opt/lgtv/bin/lgtv" -- Full path to lgtv executable
 local lgtv_cmd = lgtv_path.." "..tv_name
 local app_id = "com.webos.app."..tv_input:lower():gsub("_", "")
 local lgtv_ssl = true -- Required for firmware 03.30.16 and up. Also requires LGWebOSRemote version 2023-01-27 or newer.
-local bscpylgtv = "~/Developer/Anaconda/anaconda3/bin/bscpylgtvcommand" -- -- Full path to bscpylgtv executable
 
 
 -- Get a list of audio devices connected by HDMI
